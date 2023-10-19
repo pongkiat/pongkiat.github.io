@@ -1,0 +1,165 @@
+/*Global CSS variables*/
+:root {
+    --header-color: #0004ff;
+    --max-title-size: 3em;
+    --mid-title-size: 2em;
+    --min-title-size: 1.5em;
+    --max-sectionHeader-size: 1.5em;
+    --mid-sectionHeader-size: 1.2em;
+    --min-sectionHeader-size: 1em;
+}
+/*Default style*/
+img, video {
+    max-width: 100%;
+}
+a:visited {
+    color: var(--header-color);
+}
+body {
+    font-family: 'Kanit', 'Montserrat', sans-serif;/*Google web font*/
+    line-height: 1.3em;    
+    margin: 20px auto;
+    padding: 1em 1em;
+}
+header {
+    color: var(--header-color);
+}
+main {
+    display: grid;
+    margin-left: 3em;
+    margin-right: 3em;
+}
+section {
+    border: solid #d1d1d1;
+    padding: 0.22em 0.88em;
+    box-shadow: 8px 8px 2px #e7e7e7;
+}
+section:hover {
+    border: solid green;
+    background: rgb(221, 255, 153);
+}
+.sectionHeader {
+    color: var(--header-color);
+}
+/*Just declare the grid-area*/
+#teaching {
+    grid-area: teaching;
+}
+#research {
+    grid-area: research;
+}
+#fun {
+    grid-area: fun;
+}
+#me {
+    grid-area: me;
+}
+#contact {
+    grid-area: contact;
+}
+/*CSS for footer*/
+footer {
+    display: grid;
+    background: rgb(99, 99, 99);
+    min-height: 41px;
+    margin-top: 1.5em;
+    padding-bottom: 0.2em;
+    padding-top: 0.5em;
+    color: white;
+    font-size: var(--min-sectionHeader-size);
+    text-align: center;
+}
+/*Responsive design*/
+@media screen and (max-width: 379px) {
+    main {
+        grid-template-areas: 
+            "teaching"
+            "research"
+            "books"
+            "photos"
+            "me"
+            "contact";
+        grid-gap: 1.2em;
+    }
+    header {
+        margin-bottom: 0.6em;
+        font-size: var(--min-title-size);
+    }
+    footer {
+        grid-template-rows: 1fr 1fr;
+    }
+    .sectionHeader {
+        display: none;
+    }
+    .contactLogo {
+        width: 48px;
+        height: 48px;
+    }
+}
+@media screen and (min-width: 380px) and (max-width: 619px){
+    main {
+        grid-template: auto / 2fr 2fr;
+        grid-template-areas:
+            "teaching research"
+            "books photos"
+            "me contact";
+        grid-gap: 1.2em;
+    }
+    header {
+        margin-bottom: 0.6em;
+        font-size: var(--min-title-size);
+    }
+    footer {
+        grid-template-rows: 1fr 1fr;
+    }
+    .contactLogo {
+        width: 48px;
+        height: 48px;
+    }
+}
+@media screen and (min-width: 620px) and (max-width: 959px){
+    main {
+        grid-template: auto / 2fr 2fr 2fr;
+        grid-template-areas:
+            "teaching research me"
+            "books photos contact";
+        grid-gap: 1.5em;
+    }
+    header {
+        margin-bottom: 0.8em;
+        font-size: var(--mid-title-size);
+    }
+    footer {
+        grid-template-columns: 1fr 2fr;
+    }
+    .sectionHeader {
+        font-size: var(--mid-sectionHeader-size);
+    }
+    .contactLogo {
+        width: 55px;
+        height: 55px;
+    }
+}
+@media screen and (min-width: 960px){
+    main {
+        grid-template: auto / 2fr 2fr 2fr;
+        grid-template-areas:
+            "teaching research me"
+            "books photos contact";
+        grid-gap: 1.5em;
+    }
+    header {
+        margin-bottom: 1em;
+        font-size: var(--max-title-size);
+    }
+    footer {
+        grid-template-columns: 1fr 2fr;
+    }
+    .sectionHeader {
+        font-size: var(--max-sectionHeader-size);
+    }
+    .contactLogo {
+        width: 88px;
+        height: 88px;
+    }
+}

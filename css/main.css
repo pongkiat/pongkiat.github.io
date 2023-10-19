@@ -1,0 +1,207 @@
+/*Global CSS variables*/
+:root {
+    --header-color: #0004ff;
+    --max-title-size: 3em;
+    --mid-title-size: 2em;
+    --min-title-size: 1.5em;
+    --max-sectionHeader-size: 1.5em;
+    --mid-sectionHeader-size: 1.2em;
+    --min-sectionHeader-size: 1em;
+}
+/*Default style*/
+nav {
+    display: flex;
+    margin: 22px auto;
+}
+nav li {
+    float: left;
+    list-style: none;
+    margin-left: 0;
+    padding: 0;
+}
+.mainMenu a:link, .mainMenu a:visited{
+    color: #FAA202;    
+    display: block;
+    margin-bottom: 0;
+    padding: 0.3em 0.3em;
+    text-align: center;
+    width: 5em;
+}
+.mainMenu a:hover, .mainMenu a:active {
+    background-color: #fff35d;
+}
+.iconMenu, .contactLogo{
+    width: 48px;
+    height: 48px;
+}
+img, video {
+    max-width: 100%;
+}
+a:visited {
+    color: var(--header-color);
+}
+body {
+    font-family: 'Kanit', 'Montserrat', sans-serif;/*Google web font*/
+    line-height: 1.3em;    
+    margin: 20px auto;
+    padding: 1em 1em;
+}
+header {
+    color: var(--header-color);
+}
+#mainNormal {
+    display: grid;
+    margin-left: 3em;
+    margin-right: 3em;
+}
+#mainPhoto {
+    margin-left: 3em;
+    margin-right: 3em;
+}
+#articleNormal {
+    display: grid;
+    grid-gap: 1.2em;
+}
+#articlePhoto {
+    display: grid;
+}
+section {
+    border: solid #d1d1d1;
+    padding: 0.22em 0.88em;
+    box-shadow: 8px 8px 2px #e7e7e7;
+}
+.sectionPhoto {
+    display: grid;
+}
+.sectionHeader {
+    color: var(--header-color);
+}
+/*CSS for footer*/
+footer {
+    display: grid;
+    background: rgb(99, 99, 99);
+    min-height: 41px;
+    margin-top: 1.5em;
+    padding-bottom: 0.2em;
+    padding-top: 0.5em;
+    color: white;
+    font-size: var(--min-sectionHeader-size);
+    text-align: center;
+}
+/*Responsive design*/
+@media screen and (max-width: 469px) {
+    #mainNormal {
+        grid-gap: 1.2em;
+    }
+    #mainPhoto {
+        display: grid;
+        grid-gap: 1.2em;
+        margin: 10px auto 10px auto;
+    }
+    #articlePhoto {
+        grid-gap: 1.2em;
+        margin: 18px auto 18px auto;
+    }
+    .sectionPhoto {
+        grid-gap: 1em;
+    }
+    header {
+        font-size: var(--min-title-size);
+    }
+    footer {
+        grid-template-rows: 1fr 1fr;
+    }
+    nav {
+        flex-wrap: wrap;
+    }
+    .sectionHeader {
+        font-size: var(--min-sectionHeader-size);
+    }
+    .textMenu {
+        display: none;
+    }
+}
+@media screen and (min-width: 470px) and (max-width: 599px){
+    #mainNormal {
+        grid-gap: 1.2em;
+    }
+    header {
+        font-size: var(--min-title-size);
+    }
+    #articlePhoto {
+        grid-gap: 1.2em;
+        margin: 18px auto 18px auto;
+    }
+    .sectionPhoto {
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 1em;
+    }    
+    .sectionHeader {
+        font-size: var(--min-sectionHeader-size);
+    }
+    #sectionHeaderPhoto {
+        grid-column: span 2;
+    }
+    .textMenu {
+        display: none;
+    }
+    footer {
+        grid-template-rows: 1fr 1fr;
+    }    
+}
+@media screen and (min-width: 600px) and (max-width: 959px){
+    #mainNormal {
+        grid-gap: 1.5em;
+    }
+    #articlePhoto {
+        grid-gap: 1.5em;
+        margin: 22px auto 22px auto;
+    }
+    .sectionPhoto {
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 1.2em;
+    }
+
+    header {
+        font-size: var(--mid-title-size);
+    }
+    footer {
+        grid-template-columns: 1fr 2fr;
+    }
+    .sectionHeader {
+        font-size: var(--mid-sectionHeader-size);
+    }
+    .sectionPhoto {
+        grid-template-columns: repeat(3,2fr);
+        grid-gap: 1.5em;
+    }
+    #sectionHeaderPhoto {
+        grid-column: span 3;
+    }
+}
+@media screen and (min-width: 960px){
+    #mainNormal {
+        grid-template: auto / 3fr 1.5fr;
+        grid-gap: 1.5em;
+    }
+    #articlePhoto {
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 1.5em;
+    }
+    .sectionPhoto {
+        grid-template-columns: repeat(3,2fr);
+        grid-gap: 1.5em;
+    }
+    header {
+        font-size: var(--max-title-size);
+    }
+    footer {
+        grid-template-columns: 1fr 2fr;
+    }    
+    .sectionHeader {
+        font-size: var(--max-sectionHeader-size);
+    }
+    #sectionHeaderPhoto {
+        grid-column: span 3;
+    }
+}
