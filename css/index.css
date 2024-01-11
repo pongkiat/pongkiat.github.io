@@ -161,5 +161,6 @@ footer {
     .contactLogo {
         width: 88px;
         height: 88px;
+        vertical-align: middle;
     }
 }
