@@ -8,18 +8,22 @@
     --mid-sectionHeader-size: 1.2em;
     --min-sectionHeader-size: 1em;
 }
+
 /*Default style*/
 nav {
     display: flex;
     margin: 22px auto;
 }
+
 nav li {
     float: left;
     list-style: none;
     margin-left: 0;
     padding: 0;
 }
-.mainMenu a:link, .mainMenu a:visited{
+
+.mainMenu a:link,
+.mainMenu a:visited {
     color: #FAA202;    
     display: block;
     margin-bottom: 0;
@@ -27,55 +31,72 @@ nav li {
     text-align: center;
     width: 5em;
 }
-.mainMenu a:hover, .mainMenu a:active {
+
+.mainMenu a:hover,
+.mainMenu a:active {
     background-color: #fff35d;
 }
-.iconMenu, .contactLogo{
+
+.iconMenu,
+.contactLogo {
     width: 48px;
     height: 48px;
 }
-img, video {
+
+img,
+video {
     max-width: 100%;
 }
+
 a:visited {
     color: var(--header-color);
 }
+
 body {
     font-family: 'Kanit', 'Montserrat', sans-serif;/*Google web font*/
     line-height: 1.3em;    
     margin: 20px auto;
     padding: 1em 1em;
 }
+
 header {
     color: var(--header-color);
 }
+
 #mainNormal {
     display: grid;
     margin-left: 3em;
     margin-right: 3em;
 }
+
 #mainPhoto {
     margin-left: 3em;
     margin-right: 3em;
 }
+
 #articleNormal {
     display: grid;
     grid-gap: 1.2em;
 }
+
 #articlePhoto {
     display: grid;
 }
+
 section {
     border: solid #d1d1d1;
     padding: 0.22em 0.88em;
     box-shadow: 8px 8px 2px #e7e7e7;
 }
+
 .sectionPhoto {
     display: grid;
 }
+
 .sectionHeader {
     color: var(--header-color);
 }
+
 /*CSS for footer*/
 footer {
     display: grid;
@@ -88,6 +109,7 @@ footer {
     font-size: var(--min-sectionHeader-size);
     text-align: center;
 }
+
 /*Responsive design*/
 @media screen and (max-width: 469px) {
     #mainNormal {
@@ -121,6 +143,7 @@ footer {
         display: none;
     }
 }
+
 @media screen and (min-width: 470px) and (max-width: 599px){
     #mainNormal {
         grid-gap: 1.2em;
@@ -149,6 +172,7 @@ footer {
         grid-template-rows: 1fr 1fr;
     }    
 }
+
 @media screen and (min-width: 600px) and (max-width: 959px){
     #mainNormal {
         grid-gap: 1.5em;
@@ -179,6 +203,7 @@ footer {
         grid-column: span 3;
     }
 }
+
 @media screen and (min-width: 960px){
     #mainNormal {
         grid-template: auto / 3fr 1.5fr;
